@@ -20,6 +20,6 @@ The goal is to build a model that can take a $28 \times 28$ pixel image of a han
 
 The project searches through the following parameter grid to find the optimal configuration:
 
-Parameter - Values Checked 
-n_neighbors =2, 3, 4, 5, 6, 7, 8, 9
+Parameter - Values Checked ;
+;n_neighbors =2, 3, 4, 5, 6, 7, 8, 9;
 weights "uniform", "distance"
