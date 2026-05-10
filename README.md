@@ -23,3 +23,26 @@ The project searches through the following parameter grid to find the optimal co
 Parameter - Values Checked ;
 n_neighbors =2, 3, 4, 5, 6, 7, 8, 9;
 weights "uniform", "distance"
+
+### Prerequisites
+
+You will need Python 3.x and the following libraries:
+`pip install numpy pandas scikit-learn`
+
+## 📂 Code Structure
+
+The script performs the following steps:
+
+1. **Data Acquisition:** Fetches the MNIST dataset using `fetch_openml`.
+    
+2. **Data Splitting:** Separates the data into 60,000 training images and 10,000 test images.
+    
+3. **Model Selection:** Initializes a `KNeighborsClassifier`.
+    
+4. **Grid Search:** Runs an 8-fold cross-validation (`cv=8`) to find the best parameters.
+    
+5. **Evaluation:** Validates the model performance on the unseen test set.
+
+📊 Performance
+The GridSearchCV identifies the "best estimator," which is then used to make final predictions.
+Using weights='distance' typically yields significantly higher accuracy on MNIST compared to uniform weights.
