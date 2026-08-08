@@ -1,5 +1,3 @@
-import pandas as pd
-import numpy as np
 from sklearn.datasets import fetch_openml
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import GridSearchCV
