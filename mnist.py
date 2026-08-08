@@ -11,8 +11,8 @@ x, y = mnist.data, mnist.target
 # test and train data:
 x_train, x_test, y_train, y_test = x[:60000], x[60000:], y[:60000], y[60000:]
 param_grid = [{'weights': ["uniform", "distance"], 'n_neighbors': [3, 4, 5, 6, 7, 2, 9, 8]}]
-model.score(x_test, y_test)
 knn = GridSearchCV(model, param_grid,cv=8)
+knn.fit(x_train[:10000], y_train[:10000])
 knn.best_estimator_.fit(x_train,y_train)
 
-knn.fit(x_train[:10000], y_train[:10000])
+knn.score(x_test, y_test)
